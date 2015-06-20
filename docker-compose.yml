@@ -1,0 +1,8 @@
+# sudo mkdir -p /srv/liftscreen-error/mongo-data/db
+mongo:
+  image: dockerfile/mongodb
+  command: "/usr/bin/mongod --noprealloc --smallfiles"
+  ports:
+    - "27017:27017"
+  volumes:
+    - /srv/liftscreen-error/mongo-data:/data
